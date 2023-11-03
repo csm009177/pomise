@@ -7,16 +7,25 @@
 </head>
 <body>
   <script>
-    // const maProm = new promise((resolve, reject) =>{
-      
-    // })
-    new Promise(function(resolve, reject) {
-      let data = 'hello'
-      resolve(data);
-      console.log(resolve())
-      
+
+  function getting(){
+    let date = 'hello'
+    let errr = 'error'  
+    new Promise((resolve, reject) =>{
+      if(date==='hello'){
+        resolve(this.date);
+      } else {
+        reject(this.errr);
+      }
     });
-    
+  }
+
+  getting().then(function(resol){
+    console.log(resol)
+  })
+  
+
+
   </script>
 </body>
 </html>
