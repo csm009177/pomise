@@ -8,21 +8,18 @@
 <body>
   <script>
 
-  function getting(){
-    let date = 'hello'
-    let errr = 'error'  
-    new Promise((resolve, reject) =>{
-      if(date==='hello'){
-        resolve(this.date);
-      } else {
-        reject(this.errr);
-      }
-    });
-  }
+function getData() {
+  return new Promise((resolve, reject) =>{
+    var data = 100;
+    resolve(data);
+  });
+}
 
-  getting().then(function(resol){
-    console.log(resol)
-  })
+// resolve()의 결과 값 data를 resolvedData로 받음
+getData().then(function(resolvedData) {
+  console.log(resolvedData); // 100
+});
+
   
 
 
